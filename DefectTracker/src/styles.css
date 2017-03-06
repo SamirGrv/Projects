@@ -1,0 +1,174 @@
+body {
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: #010000;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+  background: #e6e6e6;
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 22px;
+  color: #010000;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #ff1755;
+}
+
+a, a:hover {
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  color: #010000;
+  margin: 0 0 20px 0;
+  padding: 0;
+  display: block;
+}
+
+#container {
+  width: 100%;
+  max-width: 1345px;
+  margin: 0 auto;
+  padding: 30px 0;
+  background: #ffffff;
+}
+
+header {
+  display: block;
+  width: 100%;
+  height: 50px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+header .logo img {
+  position: absolute;
+  left: 10px;
+  top: 15%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+nav {
+  display: inline-block;
+  width: 100%;
+  font-size: 0;
+  line-height: 0;
+  margin: 0 auto;
+  padding: 0;
+  background: #010000;
+  cursor: #ffffff;
+}
+
+nav, nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  float: left;
+  margin: 0 5px 0 0;
+}
+
+nav ul li a {
+  display: block;
+  font-size: 16px;
+  line-height: normal;
+  text-align: center;
+  color: #ffffff;
+  padding: 15px 20px;
+}
+
+nav ul li a:hover {
+  background: #ffffff;
+}
+
+#container .mainContent {
+  display: block;
+  margin: 35px 0;
+  padding: 0 10px;
+}
+
+footer {
+  background: #010000;
+  color: #ffffff;
+  min-height: 30px;
+}
+
+.hdrLeft {
+  float: left;
+  width: 80%;
+}
+
+.hdrRight {
+  float: right;
+}
+
+.loginSection {
+  display: block;
+  padding: 0 15px;
+}
+
+.loginSection a {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+
+/* DivTable.com */
+
+.divTable {
+  display: table;
+  width: 50%;
+}
+
+.divTableRow {
+  display: table-row;
+}
+
+.divTableHeading {
+  background-color: #EEE;
+  display: table-header-group;
+}
+
+.divTableCell, .divTableHead {
+  display: table-cell;
+  padding: 3px 10px;
+}
+
+.divTableHeading {
+  background-color: #EEE;
+  display: table-header-group;
+  font-weight: bold;
+}
+
+.divTableFoot {
+  background-color: #EEE;
+  display: table-footer-group;
+  font-weight: bold;
+}
+
+.divTableBody {
+  display: table-row-group;
+}
+
+@media only screen and (max-width: 1345px) {
+  #container {
+    width: auto;
+    margin: 0 3%;
+  }
+}

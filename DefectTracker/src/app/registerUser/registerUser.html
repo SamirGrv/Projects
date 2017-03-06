@@ -1,0 +1,99 @@
+<section class="mainContent">
+  <h1>Register</h1>
+  <form [formGroup]="registerUserForm" (ngSubmit)="registerUser(registerUserForm.value)">
+    <div class="content">
+      <div class="divTable">
+        <div class="divTableBody">
+          <div class="divTableRow">
+            <div class="divTableCell">First Name</div>
+            <div class="divTableCell"><input type="text" id="txtFName" placeholder="First Name" [formControl]="registerUserForm.controls['txtFName']"></div>
+            <div *ngIf="registerUserForm.controls['txtFName'].touched">
+              <div class="alert alert-danger" *ngIf="registerUserForm.controls['txtFName'].hasError('required')">First name is required</div>
+              <div class="alert alert-danger" *ngIf="registerUserForm.controls['txtFName'].hasError('minlength')">First name should have minimum 5 characters</div>
+              <div class="alert alert-danger" *ngIf="registerUserForm.controls['txtFName'].hasError('maxlength')">First name can have maximum 50 characters</div>
+            </div>
+          </div>
+          <div class="divTableRow">
+            <div class="divTableCell">Last Name</div>
+            <div class="divTableCell"><input type="text" id="txtLName" placeholder="Last Name" [formControl]="registerUserForm.controls['txtLName']"></div>
+            <div *ngIf="registerUserForm.controls['txtLName'].touched">
+              <div class="alert alert-danger" *ngIf="registerUserForm.controls['txtLName'].hasError('required')">Last name is required</div>
+              <div class="alert alert-danger" *ngIf="registerUserForm.controls['txtLName'].hasError('minlength')">Last name should have minimum 5 characters</div>
+              <div class="alert alert-danger" *ngIf="registerUserForm.controls['txtLName'].hasError('maxlength')">Last name can have maximum 50 characters</div>
+            </div>
+          </div>
+          <div class="divTableRow">
+            <div class="divTableCell">Username</div>
+            <div class="divTableCell"><input type="text" id="txtUName" placeholder="Username" [formControl]="registerUserForm.controls['txtUName']"></div>
+            <div *ngIf="registerUserForm.controls['txtUName'].touched">
+              <div class="alert alert-danger" *ngIf="registerUserForm.controls['txtUName'].hasError('required')">Username is required</div>
+              <div class="alert alert-danger" *ngIf="registerUserForm.controls['txtUName'].hasError('minlength')">Username should have minimum 5 characters</div>
+              <div class="alert alert-danger" *ngIf="registerUserForm.controls['txtUName'].hasError('maxlength')">Username can have maximum 50 characters</div>
+            </div>
+          </div>
+          <div class="divTableRow">
+            <div class="divTableCell">Password</div>
+            <div class="divTableCell"><input type="password" id="pwdPassword" placeholder="Password" [formControl]="registerUserForm.controls['pwdPassword']"></div>
+            <div *ngIf="registerUserForm.controls['pwdPassword'].touched">
+              <div class="alert alert-danger" *ngIf="registerUserForm.controls['pwdPassword'].hasError('required')">Password is required</div>
+              <div class="alert alert-danger" *ngIf="registerUserForm.controls['pwdPassword'].hasError('minlength')">Password should have minimum 5 characters</div>
+              <div class="alert alert-danger" *ngIf="registerUserForm.controls['pwdPassword'].hasError('maxlength')">Password can have maximum 15 characters</div>
+              <div class="alert alert-danger" *ngIf="registerUserForm.controls['pwdPassword'].hasError('validPassword')">Please enter a valid password</div>
+            </div>
+          </div>
+          <div class="divTableRow">
+            <div class="divTableCell">Re-enter Password</div>
+            <div class="divTableCell"><input type="text" id="pwdRPassword" placeholder="Reenter Password" [formControl]="registerUserForm.controls['txtRPassword']"></div>
+          </div>
+          <div class="divTableRow">
+            <div class="divTableCell">Email</div>
+            <div class="divTableCell"><input type="email" id="txtEmail" placeholder="Email" [formControl]="registerUserForm.controls['txtEmail']"></div>
+            <div *ngIf="registerUserForm.controls['txtFName'].touched">
+              <div class="alert alert-danger" *ngIf="registerUserForm.controls['txtEmail'].hasError('required')">Email is required</div>
+            </div>
+          </div>
+          <div class="divTableRow">
+            <div class="divTableCell">Gender</div>
+            <div class="divTableCell">
+              <input type="radio" name="gender" value="0" [formControl]="registerUserForm.controls['gender']"> Male
+              <input type="radio" name="gender" value="1" [formControl]="registerUserForm.controls['gender']"> Female
+            </div>
+          </div>
+          <div class="divTableRow">
+            <div class="divTableCell">Date of Birth</div>
+            <div class="divTableCell">
+              <select name='selDay' [formControl]="registerUserForm.controls['selDay']">
+                <option selected disabled hidden>Day</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>&nbsp;/&nbsp;
+              <select name='selMonth' [formControl]="registerUserForm.controls['selMonth']">
+                <option selected disabled hidden>Month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+              </select>&nbsp;/&nbsp;
+              <select name='selYear' [formControl]="registerUserForm.controls['selYear']">
+                <option selected disabled hidden>Year</option>
+                <option value="1987">1987</option>
+                <option value="1988">1988</option>
+                <option value="1989">1989</option>
+                <option value="1990">1990</option>
+                <option value="1991">1991</option>
+              </select>
+            </div>
+          </div>
+          <div class="divTableRow">
+            <div class="divTableCell">&nbsp;</div>
+            <div class="divTableCell"><input type="submit" title="Register" style="margin-right:10px;" [disabled]="!registerUserForm.valid" value="Register"><input type="button" value="Reset"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
